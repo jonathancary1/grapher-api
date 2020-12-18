@@ -1,12 +1,8 @@
 import express from 'express';
 
 const app = express();
-const port = process.env.PORT || 8080;
-const host = process.env.HOST || 'localhost';
-
-app.get('/', (req, res) => {
-  res.send('/');
-});
+const port = process.env.PORT;
+const host = process.env.HOST;
 
 app.listen(port, host, () => {
   console.log('Running...');
