@@ -31,6 +31,7 @@ const server = new ApolloServer({
 
 beforeAll(async () => {
   await mongoose.connect(await mongod.getUri(), {
+    autoIndex: false,
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,

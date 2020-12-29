@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  username: String,
+  username:{ type: String, index: true },
   crawls: { type: [mongoose.Schema.ObjectId], default: [] },
 });
 

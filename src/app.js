@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import server from './graphql';
 
 mongoose.connect('mongodb://mongo', {
+  autoIndex: false,
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
