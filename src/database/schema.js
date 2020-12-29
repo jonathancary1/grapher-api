@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.statics.findOneOrCreate = function findOneOrCreate(username) {
-  return this.findOneAndUpdate({ username }, { username }, { upsert: true });
+  const options = { upsert: true, returnOriginal: false };
+  return this.findOneAndUpdate({ username }, { username }, options);
 };
 
 const crawlSchema = new mongoose.Schema({
