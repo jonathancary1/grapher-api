@@ -46,7 +46,7 @@ export default {
       return Crawl.findById(id);
     },
     crawls(parent) {
-      if (parent === null) {
+      if (parent == null) {
         return null;
       }
       return Promise.all(parent.crawls.map((id) => Crawl.findById(id)));
